@@ -4,7 +4,6 @@ import co.pokeapi.restpoke.domain.dtos.HighlightResult
 import co.pokeapi.restpoke.domain.dtos.Pokemon
 import co.pokeapi.restpoke.domain.enums.Order
 import co.pokeapi.restpoke.services.PokemonService
-import java.net.BindException
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.http.ResponseEntity
@@ -12,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
+import java.net.BindException
 
 @RestController
 @RequestMapping("pokemons")
