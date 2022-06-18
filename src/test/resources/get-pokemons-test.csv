@@ -1,0 +1,11 @@
+query    ; order  ; status; strict ; expected
+pikachu  ;        ;  200  ;  true  ; {"result":["pikachu","pikachu-alola-cap","pikachu-belle","pikachu-cosplay","pikachu-gmax","pikachu-hoenn-cap","pikachu-kalos-cap","pikachu-libre","pikachu-original-cap","pikachu-partner-cap","pikachu-phd","pikachu-pop-star","pikachu-rock-star","pikachu-sinnoh-cap","pikachu-starter","pikachu-unova-cap","pikachu-world-cap"]}
+bul      ;        ;  200  ;  true  ; {"result":["bulbasaur","granbull","snubbull","tapu-bulu"]}
+char     ;        ;  200  ;  true  ; {"result":["charizard","charizard-gmax","charizard-mega-x","charizard-mega-y","charjabug","charmander","charmeleon","chimchar"]}
+Sq       ;        ;  200  ;  true  ; {"result":["corvisquire","masquerain","squirtle"]}
+eevE     ;        ;  200  ;  true  ; {"result":["eevee","eevee-gmax","eevee-starter"]}
+MEW      ;        ;  200  ;  true  ; {"result":["mew","mewtwo","mewtwo-mega-x","mewtwo-mega-y"]}
+pikachu  ; LENGTH ;  200  ;  true  ; {"result":["pikachu","pikachu-phd","pikachu-gmax","pikachu-libre","pikachu-belle","pikachu-starter","pikachu-cosplay","pikachu-pop-star","pikachu-world-cap","pikachu-alola-cap","pikachu-kalos-cap","pikachu-unova-cap","pikachu-hoenn-cap","pikachu-rock-star","pikachu-sinnoh-cap","pikachu-partner-cap","pikachu-original-cap"]}
+""       ;        ;  400  ;  false ; {"details":["Query param is required and cannot be blank"]}
+Thulio   ;        ;  404  ;  false ; {"details":["Pokemon not found"]}
+         ;        ;  500  ;  false ; {"details":["Required request parameter 'query' for method parameter type String is not present"]}
