@@ -1,10 +1,10 @@
-version: "3"
+version: "3.7"
+
 services:
-  rest-poke:
-    container_name: rest-poke
+  web:
+    image: rest-poke
     build:
       context: .
       dockerfile: Dockerfile
-    image: rest-poke
     ports:
       - "8080:8080"
