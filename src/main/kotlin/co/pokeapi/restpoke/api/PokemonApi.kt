@@ -19,26 +19,21 @@ class PokemonApi {
 
     fun getPokemon() =
         try {
-            LOGGER.info("""
-                PokemonApi.getPokemon() -- Start --
-                Getting list of pokemon from PokeAPI
-            """.trimIndent())
+            LOGGER.info("PokemonApi.getPokemon() -- Start -- Getting list of pokemon from PokeAPI")
 
             val result = RestTemplate().getForObject(pokemonApiUrl, PokemonResults::class.java)!!
 
-            LOGGER.info("""
-                PokemonApi.getPokemon() -- End --
-                Successfully retrieved list of pokemon from PokeAPI
-                result: ${result.count}
-            """.trimIndent())
+            LOGGER.info(
+             "PokemonApi.getPokemon() -- End -- " +
+             "Successfully retrieved list of pokemon from PokeAPI -- result: ${result.count}"
+            )
 
             result
         } catch (e: Exception) {
-            LOGGER.error("""
-                PokemonApi.getPokemon() -- Error --
-                Error retrieving list of pokemon from PokeAPI
-                error: ${e.message}
-            """.trimIndent())
+            LOGGER.error(
+             "PokemonApi.getPokemon() -- Error -- " +
+             "Error retrieving list of pokemon from PokeAPI -- error: ${e.message}"
+            )
 
             throw e
         }

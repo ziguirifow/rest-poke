@@ -28,27 +28,21 @@ class PokemonController(
         @RequestParam(value = "query") query: String,
         @RequestParam(value = "sort") sort: Order?,
     ): ResponseEntity<Pokemon> = try {
-        LOGGER.info("""
-            PokemonController.getPokemon() -- Start --
-            Called with query: $query ${if (sort != null) "and sort: $sort" else ""}
-        """.trimIndent())
+        LOGGER.info(
+         "PokemonController.getPokemon() -- Start -- " +
+         "Called with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+        )
 
         isQueryBlank(query)
 
         val result = pokemonService.getPokemon(query, sort)
         val response = ResponseEntity.ok(result)
 
-        LOGGER.info("""
-            PokemonController.getPokemon() -- End --
-            Successfully returned response: ${response.statusCode}
-        """.trimIndent())
+        LOGGER.info("PokemonController.getPokemon() -- End -- Successfully returned response: ${response.statusCode}")
 
         response
     } catch (e: Exception) {
-        LOGGER.error("""
-            PokemonController.getPokemon() -- End --
-            Error: ${e.message}
-        """.trimIndent())
+        LOGGER.error("PokemonController.getPokemon() -- End -- Error: ${e.message}")
 
         throw e
     }
@@ -58,27 +52,21 @@ class PokemonController(
         @RequestParam(value = "query") query: String,
         @RequestParam(value = "sort") sort: Order?
     ): ResponseEntity<HighlightResult> = try {
-        LOGGER.info("""
-            PokemonController.getPokemonHighlight() -- Start --
-            Called with query: $query ${if (sort != null) "and sort: $sort" else ""}
-        """.trimIndent())
+        LOGGER.info(
+         "PokemonController.getPokemonHighlight() -- Start -- " +
+         "Called with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+        )
 
         isQueryBlank(query)
 
         val result = pokemonService.getPokemonHighlight(query, sort)
         val response = ResponseEntity.ok(result)
 
-        LOGGER.info("""
-            PokemonController.getPokemonHighlight() -- End --
-            Successfully returned response: ${response.statusCode}
-        """.trimIndent())
+        LOGGER.info("PokemonController.getPokemonHighlight() -- End -- Successfully returned response: ${response.statusCode}")
 
         response
     } catch (e: Exception) {
-        LOGGER.error("""
-            PokemonController.getPokemonHighlight() -- End --
-            Error: ${e.message}
-        """.trimIndent())
+        LOGGER.error("PokemonController.getPokemonHighlight() -- End -- Error: ${e.message}")
 
         throw e
     }
