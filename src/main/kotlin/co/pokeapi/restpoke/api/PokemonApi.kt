@@ -24,15 +24,16 @@ class PokemonApi {
             val result = RestTemplate().getForObject(pokemonApiUrl, PokemonResults::class.java)!!
 
             LOGGER.info(
-             "PokemonApi.getPokemon() -- End -- " +
-             "Successfully retrieved list of pokemon from PokeAPI -- result: ${result.count}"
+                "PokemonApi.getPokemon() -- End -- " +
+                        "Successfully retrieved list of pokemon from PokeAPI -- " +
+                        "result: ${result.count}"
             )
 
             result
         } catch (e: Exception) {
             LOGGER.error(
-             "PokemonApi.getPokemon() -- Error -- " +
-             "Error retrieving list of pokemon from PokeAPI -- error: ${e.message}"
+                "PokemonApi.getPokemon() -- Error -- " +
+                        "Error retrieving list of pokemon from PokeAPI -- error: ${e.message}"
             )
 
             throw e

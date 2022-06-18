@@ -29,8 +29,8 @@ class PokemonController(
         @RequestParam(value = "sort") sort: Order?,
     ): ResponseEntity<Pokemon> = try {
         LOGGER.info(
-         "PokemonController.getPokemon() -- Start -- " +
-         "Called with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+            "PokemonController.getPokemon() -- Start -- " +
+                    "Called with query: $query ${if (sort != null) "and sort: $sort" else ""}"
         )
 
         isQueryBlank(query)
@@ -38,7 +38,10 @@ class PokemonController(
         val result = pokemonService.getPokemon(query, sort)
         val response = ResponseEntity.ok(result)
 
-        LOGGER.info("PokemonController.getPokemon() -- End -- Successfully returned response: ${response.statusCode}")
+        LOGGER.info(
+            "PokemonController.getPokemon() -- End -- " +
+                    "Successfully returned response: ${response.statusCode}"
+        )
 
         response
     } catch (e: Exception) {
@@ -53,8 +56,8 @@ class PokemonController(
         @RequestParam(value = "sort") sort: Order?
     ): ResponseEntity<HighlightResult> = try {
         LOGGER.info(
-         "PokemonController.getPokemonHighlight() -- Start -- " +
-         "Called with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+            "PokemonController.getPokemonHighlight() -- Start -- " +
+                    "Called with query: $query ${if (sort != null) "and sort: $sort" else ""}"
         )
 
         isQueryBlank(query)
@@ -62,7 +65,10 @@ class PokemonController(
         val result = pokemonService.getPokemonHighlight(query, sort)
         val response = ResponseEntity.ok(result)
 
-        LOGGER.info("PokemonController.getPokemonHighlight() -- End -- Successfully returned response: ${response.statusCode}")
+        LOGGER.info(
+            "PokemonController.getPokemonHighlight() -- End -- " +
+                    "Successfully returned response: ${response.statusCode}"
+        )
 
         response
     } catch (e: Exception) {

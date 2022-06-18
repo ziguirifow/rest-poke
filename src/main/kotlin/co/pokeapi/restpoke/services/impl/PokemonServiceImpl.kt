@@ -24,8 +24,9 @@ class PokemonServiceImpl(
     override fun getPokemon(query: String, sort: Order?): Pokemon =
         try {
             LOGGER.info(
-             "PokemonServiceImpl.getPokemon() -- Start -- " +
-             "Getting pokemon with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+                "PokemonServiceImpl.getPokemon() -- Start -- " +
+                        "Getting pokemon with query: $query " +
+                        if (sort != null) "and sort: $sort" else ""
             )
 
             val mappedPokemons = getMappedPokemons(query)
@@ -34,16 +35,18 @@ class PokemonServiceImpl(
             val pokemons = isPokemonListEmpty(sortedPokemons)
 
             LOGGER.info(
-             "PokemonServiceImpl.getPokemon() -- End -- " +
-             "Successfully retrieved ${pokemons.result.size} pokemons with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+                "PokemonServiceImpl.getPokemon() -- End -- " +
+                        "Successfully retrieved ${pokemons.result.size} pokemons " +
+                        "with query: $query ${if (sort != null) "and sort: $sort" else ""}"
             )
 
             pokemons
         } catch (e: Exception) {
             LOGGER.error(
-             "PokemonServiceImpl.getPokemon() -- Error -- " +
-             "Error retrieving pokemon with query: $query ${if (sort != null) "and sort: $sort" else ""} " +
-             "-- error: ${e.message}"
+                "PokemonServiceImpl.getPokemon() -- Error -- " +
+                        "Error retrieving pokemon with query: $query " +
+                        "${if (sort != null) "and sort: $sort" else ""} " +
+                        "-- error: ${e.message}"
             )
 
             throw e
@@ -52,8 +55,9 @@ class PokemonServiceImpl(
     override fun getPokemonHighlight(query: String, sort: Order?): HighlightResult =
         try {
             LOGGER.info(
-             "PokemonServiceImpl.getPokemonHighlight() -- Start -- " +
-             "Getting highlighted pokemon with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+                "PokemonServiceImpl.getPokemonHighlight() -- Start -- " +
+                        "Getting highlighted pokemon with query: $query " +
+                        if (sort != null) "and sort: $sort" else ""
             )
 
             val mappedPokemons = getMappedPokemons(query)
@@ -62,16 +66,18 @@ class PokemonServiceImpl(
             val pokemons = isPokemonListEmpty(sortedPokemons)
 
             LOGGER.info(
-             "PokemonServiceImpl.getPokemonHighlight() -- End -- " +
-             "Successfully retrieved ${pokemons.result.size} highlighted pokemon with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+                "PokemonServiceImpl.getPokemonHighlight() -- End -- " +
+                        "Successfully retrieved ${pokemons.result.size} highlighted pokemon " +
+                        "with query: $query ${if (sort != null) "and sort: $sort" else ""}"
             )
 
             pokemons.highlight(query)
         } catch (e: Exception) {
             LOGGER.error(
-             "PokemonServiceImpl.getPokemonHighlight() -- Error -- " +
-             "Error retrieving highlighted pokemon with query: $query ${if (sort != null) "and sort: $sort" else ""} " +
-             "-- error: ${e.message}"
+                "PokemonServiceImpl.getPokemonHighlight() -- Error -- " +
+                        "Error retrieving highlighted pokemon " +
+                        "with query: $query ${if (sort != null) "and sort: $sort" else ""} " +
+                        "-- error: ${e.message}"
             )
 
             throw e
