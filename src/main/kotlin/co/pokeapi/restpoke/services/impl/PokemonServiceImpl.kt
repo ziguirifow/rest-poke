@@ -93,5 +93,4 @@ class PokemonServiceImpl(
         if (sortedPokemons.result.isEmpty()) {
             throw PokemonNotFoundException()
         } else sortedPokemons
-
 }
