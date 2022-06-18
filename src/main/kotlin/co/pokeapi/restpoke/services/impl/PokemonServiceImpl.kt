@@ -25,8 +25,8 @@ class PokemonServiceImpl(
         try {
             LOGGER.info(
                 "PokemonServiceImpl.getPokemon() -- Start -- " +
-                        "Getting pokemon with query: $query " +
-                        if (sort != null) "and sort: $sort" else ""
+                    "Getting pokemon with query: $query " +
+                    if (sort != null) "and sort: $sort" else ""
             )
 
             val mappedPokemons = getMappedPokemons(query)
@@ -36,17 +36,17 @@ class PokemonServiceImpl(
 
             LOGGER.info(
                 "PokemonServiceImpl.getPokemon() -- End -- " +
-                        "Successfully retrieved ${pokemons.result.size} pokemons " +
-                        "with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+                    "Successfully retrieved ${pokemons.result.size} pokemons " +
+                    "with query: $query ${if (sort != null) "and sort: $sort" else ""}"
             )
 
             pokemons
         } catch (e: Exception) {
             LOGGER.error(
                 "PokemonServiceImpl.getPokemon() -- Error -- " +
-                        "Error retrieving pokemon with query: $query " +
-                        "${if (sort != null) "and sort: $sort" else ""} " +
-                        "-- error: ${e.message}"
+                    "Error retrieving pokemon with query: $query " +
+                    "${if (sort != null) "and sort: $sort" else ""} " +
+                    "-- error: ${e.message}"
             )
 
             throw e
@@ -56,8 +56,8 @@ class PokemonServiceImpl(
         try {
             LOGGER.info(
                 "PokemonServiceImpl.getPokemonHighlight() -- Start -- " +
-                        "Getting highlighted pokemon with query: $query " +
-                        if (sort != null) "and sort: $sort" else ""
+                    "Getting highlighted pokemon with query: $query " +
+                    if (sort != null) "and sort: $sort" else ""
             )
 
             val mappedPokemons = getMappedPokemons(query)
@@ -67,17 +67,17 @@ class PokemonServiceImpl(
 
             LOGGER.info(
                 "PokemonServiceImpl.getPokemonHighlight() -- End -- " +
-                        "Successfully retrieved ${pokemons.result.size} highlighted pokemon " +
-                        "with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+                    "Successfully retrieved ${pokemons.result.size} highlighted pokemon " +
+                    "with query: $query ${if (sort != null) "and sort: $sort" else ""}"
             )
 
             pokemons.highlight(query)
         } catch (e: Exception) {
             LOGGER.error(
                 "PokemonServiceImpl.getPokemonHighlight() -- Error -- " +
-                        "Error retrieving highlighted pokemon " +
-                        "with query: $query ${if (sort != null) "and sort: $sort" else ""} " +
-                        "-- error: ${e.message}"
+                    "Error retrieving highlighted pokemon " +
+                    "with query: $query ${if (sort != null) "and sort: $sort" else ""} " +
+                    "-- error: ${e.message}"
             )
 
             throw e

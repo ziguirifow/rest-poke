@@ -25,15 +25,15 @@ class PokemonApi {
 
             LOGGER.info(
                 "PokemonApi.getPokemon() -- End -- " +
-                        "Successfully retrieved list of pokemon from PokeAPI -- " +
-                        "result: ${result.count}"
+                    "Successfully retrieved list of pokemon from PokeAPI -- " +
+                    "result: ${result.count}"
             )
 
             result
         } catch (e: Exception) {
             LOGGER.error(
                 "PokemonApi.getPokemon() -- Error -- " +
-                        "Error retrieving list of pokemon from PokeAPI -- error: ${e.message}"
+                    "Error retrieving list of pokemon from PokeAPI -- error: ${e.message}"
             )
 
             throw e

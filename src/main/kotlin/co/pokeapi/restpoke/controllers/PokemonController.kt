@@ -30,7 +30,7 @@ class PokemonController(
     ): ResponseEntity<Pokemon> = try {
         LOGGER.info(
             "PokemonController.getPokemon() -- Start -- " +
-                    "Called with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+                "Called with query: $query ${if (sort != null) "and sort: $sort" else ""}"
         )
 
         isQueryBlank(query)
@@ -40,7 +40,7 @@ class PokemonController(
 
         LOGGER.info(
             "PokemonController.getPokemon() -- End -- " +
-                    "Successfully returned response: ${response.statusCode}"
+                "Successfully returned response: ${response.statusCode}"
         )
 
         response
@@ -57,7 +57,7 @@ class PokemonController(
     ): ResponseEntity<HighlightResult> = try {
         LOGGER.info(
             "PokemonController.getPokemonHighlight() -- Start -- " +
-                    "Called with query: $query ${if (sort != null) "and sort: $sort" else ""}"
+                "Called with query: $query ${if (sort != null) "and sort: $sort" else ""}"
         )
 
         isQueryBlank(query)
@@ -67,7 +67,7 @@ class PokemonController(
 
         LOGGER.info(
             "PokemonController.getPokemonHighlight() -- End -- " +
-                    "Successfully returned response: ${response.statusCode}"
+                "Successfully returned response: ${response.statusCode}"
         )
 
         response
