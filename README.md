@@ -13,8 +13,8 @@ API REST que consome a [PokéAPI](https://pokeapi.co/) data base, com dois endpo
     passado como parâmetro.
     
     GET /pokemons/highlight&query=<nome do Pokémon>?sort=<nome do atributo> 
-    - JSON com o Pokémon que contenha o nome do Pokémon passado como parâmetro e destaca-o pelo atributo passado 
-    como parâmetro e ordena-os pelo atributo passado como parâmetro.
+    - JSON com o Pokémon que contenha o nome do Pokémon passado como parâmetro e destaca-o pelo atributo
+    passado como parâmetro e ordena-os pelo atributo passado como parâmetro.
 
     Params:
     - query: String, obrigatória.
