@@ -93,30 +93,34 @@ para buscar um Pokémon ou um grupo de Pokémons.
 
 ### 🌐 Heroku
 
-```bash
     # Acesse a interfacer do swagger direto pela url:
     https://rest-poke.herokuapp.com
-```
 
 ### 🐳 Docker
 
-```bash
     # Clone o repositório e rode o comando na raiz do projeto:
     docker-compose up
     
     # Com o servidor rodando você poderá acessar a interfacer do swagger direto pela url:
     http://localhost:5000/
-```
 
 ### 🔨 Local
 
-```bash
     # Clone o repositório e rode o comando na raiz do projeto:
     gradle :clean :build or ./gradlew :clean :build
-    
+        
     # Depois disso, abra a classe RestPokeApplication.kt, ela se encontra em src/main/kotlin, 
     # e dê run no método main()
-    
+        
     # Com o servidor rodando você poderá acessar a interfacer do swagger direto pela url:
     http://localhost:5000/
-```
+
+---
+
+## 💡 Melhorias
+
+    - Como o Kotlin não tem uma implementação oficial de LinkedList, usar o Merge Sort não é uma das melhores
+    opções. Talvez implementar o TimSort que já é usado pelo próprio Java e Kotlin em suas Libs de sort.
+
+    - Implementar um solução de cache que expira depois de um certo tempo. Para melhorar a performance
+    das respostas, escalabilidade, e não ter problema quando a API externa não estiver respondendo.
