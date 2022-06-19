@@ -2,15 +2,18 @@
 
 # 💻 Projeto
 
-API REST que consome a [PokéAPI](https://pokeapi.co/) data base, com dois endpoints que o usuário passa um parâmetro para buscar um Pokémon ou um grupo de Pokémons.
+API REST que consome a [PokéAPI](https://pokeapi.co/) data base, com dois endpoints que o usuário passa um parâmetro
+para buscar um Pokémon ou um grupo de Pokémons.
+
 ### Deploy da API no Heroku (https://rest-poke.herokuapp.com) usando a interface do Swagger.
 
 ---
 
 # 📚 API
+
     GET /pokemons?query=<nome do Pokémon>&sort=<nome do atributo> 
-    - Busca todos os Pokémons que contenham o nome do Pokémon passado como parâmetro e ordena-os pelo atributo 
-    passado como parâmetro.
+    - Busca todos os Pokémons que contenham o nome do Pokémon passado como parâmetro e ordena-os pelo
+    atributo passado como parâmetro.
     
     GET /pokemons/highlight&query=<nome do Pokémon>?sort=<nome do atributo> 
     - JSON com o Pokémon que contenha o nome do Pokémon passado como parâmetro e destaca-o pelo atributo
@@ -35,20 +38,23 @@ API REST que consome a [PokéAPI](https://pokeapi.co/) data base, com dois endpo
 ---
 
 # 🔀 Merge Sort
-    Merge Sort é um algoritmo de divisão e conquista. Ele divide a matriz de entrada em duas metades, chama a si mesmo 
-    pelas duas metades e depois mescla as duas metades classificadas. A maior parte do algoritmo recebe dois arrays 
-    ordenados, e temos que mesclá-los em um único array ordenado. Todo o processo de ordenação de uma matriz de N 
-    inteiros pode ser resumido em três etapas:
+
+    Merge Sort é um algoritmo de divisão e conquista. Ele divide a matriz de entrada em duas metades, chama a
+    si mesmo pelas duas metades e depois mescla as duas metades classificadas. A maior parte do algoritmo
+    recebe dois arrays ordenados, e temos que mesclá-los em um único array ordenado. Todo o processo de
+    ordenação de uma matriz de N inteiros pode ser resumido em três etapas:
 
 	- Divida a matriz em duas metades.
 	- Classifique a metade esquerda e a metade direita usando o mesmo algoritmo recorrente.
 	- Mesclar as metades ordenadas.
 
-    Colocando em linguagem simples, dividimos o subproblema em duas partes em cada etapa e temos uma quantidade linear 
-    de trabalho que precisamos fazer para mesclar as duas metades classificadas em cada etapa.
+    Colocando em linguagem simples, dividimos o subproblema em duas partes em cada etapa e temos uma
+    quantidade linear de trabalho que precisamos fazer para mesclar as duas metades classificadas em 
+    cada etapa.
     
     Complexidade:
-    A maior vantagem de usar Merge sort é que a complexidade de tempo é apenas n*log(n) para classificar um Array inteiro.
+    A maior vantagem de usar Merge sort é que a complexidade de tempo é apenas n*log(n) para classificar um
+    Array inteiro.
     
     Propriedades:
     - Complexidade Espacial: O(n)
@@ -58,6 +64,7 @@ API REST que consome a [PokéAPI](https://pokeapi.co/) data base, com dois endpo
 ---
 
 # 📃 Diagrama
+
 <p align="center">
   <img alt="Diagrama" src=".github/App.drawio.png">
 </p>
@@ -107,7 +114,8 @@ http://localhost:5000/
 # Clone o repositório e rode o comando na raiz do projeto:
 gradle :clean :build or ./gradlew :clean :build
 
-# Depois disso, abra a classe RestPokeApplication.kt, ela se encontra em src/main/kotlin, e dê run no método main()
+# Depois disso, abra a classe RestPokeApplication.kt, ela se encontra em src/main/kotlin, 
+# e dê run no método main()
 
 # Com o servidor rodando você poderá acessar a interfacer do swagger direto pela url:
 http://localhost:5000/
