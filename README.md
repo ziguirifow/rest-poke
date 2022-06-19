@@ -9,7 +9,7 @@ para buscar um Pokémon ou um grupo de Pokémons.
 
 ---
 
-## 📚 API
+# 📚 API
 
     GET /pokemons?query=<nome do Pokémon>&sort=<nome do atributo> 
     - Busca todos os Pokémons que contenham o nome do Pokémon passado como parâmetro e ordena-os pelo
@@ -89,18 +89,18 @@ para buscar um Pokémon ou um grupo de Pokémons.
 
 ---
 
-## 👨‍💻 Como rodar o projeto:
+## 👨‍💻 Como rodar o projeto
 
 ### 🌐 Heroku
 
-```bash
+```
 # Acesse a interfacer do swagger direto pela url:
 https://rest-poke.herokuapp.com
 ```
 
 ### 🐳 Docker
 
-```bash
+```
 # Clone o repositório e rode o comando na raiz do projeto:
 docker-compose up
 
@@ -110,7 +110,7 @@ http://localhost:5000/
 
 ### 🔨 Local
 
-```bash
+```
 # Clone o repositório e rode o comando na raiz do projeto:
 gradle :clean :build or ./gradlew :clean :build
 
