@@ -9,7 +9,7 @@ para buscar um Pokémon ou um grupo de Pokémons.
 
 ---
 
-# 📚 API
+## 📚 API
 
     GET /pokemons?query=<nome do Pokémon>&sort=<nome do atributo> 
     - Busca todos os Pokémons que contenham o nome do Pokémon passado como parâmetro e ordena-os pelo
@@ -37,16 +37,16 @@ para buscar um Pokémon ou um grupo de Pokémons.
 
 ---
 
-# 🔀 Merge Sort
+## 🔀 Merge Sort
 
     Merge Sort é um algoritmo de divisão e conquista. Ele divide a matriz de entrada em duas metades, chama a
     si mesmo pelas duas metades e depois mescla as duas metades classificadas. A maior parte do algoritmo
     recebe dois arrays ordenados, e temos que mesclá-los em um único array ordenado. Todo o processo de
     ordenação de uma matriz de N inteiros pode ser resumido em três etapas:
 
-	- Divida a matriz em duas metades.
-	- Classifique a metade esquerda e a metade direita usando o mesmo algoritmo recorrente.
-	- Mesclar as metades ordenadas.
+    - Divida a matriz em duas metades.
+    - Classifique a metade esquerda e a metade direita usando o mesmo algoritmo recorrente.
+    - Mesclar as metades ordenadas.
 
     Colocando em linguagem simples, dividimos o subproblema em duas partes em cada etapa e temos uma
     quantidade linear de trabalho que precisamos fazer para mesclar as duas metades classificadas em 
@@ -63,7 +63,7 @@ para buscar um Pokémon ou um grupo de Pokémons.
 
 ---
 
-# 📃 Diagrama
+## 📃 Diagrama
 
 <p align="center">
   <img alt="Diagrama" src=".github/App.drawio.png">
@@ -71,7 +71,7 @@ para buscar um Pokémon ou um grupo de Pokémons.
 
 ---
 
-# 🚀 Tecnologias
+## 🚀 Tecnologias
 
 <h2 align="center">Esse projeto foi desenvolvido com as seguintes tecnologias:</h2>
 
@@ -89,16 +89,16 @@ para buscar um Pokémon ou um grupo de Pokémons.
 
 ---
 
-# 👨‍💻 Como rodar o projeto:
+## 👨‍💻 Como rodar o projeto:
 
-## 🌐 Heroku
+### 🌐 Heroku
 
 ```bash
 # Acesse a interfacer do swagger direto pela url:
 https://rest-poke.herokuapp.com
 ```
 
-## 🐳 Docker
+### 🐳 Docker
 
 ```bash
 # Clone o repositório e rode o comando na raiz do projeto:
@@ -108,7 +108,7 @@ docker-compose up
 http://localhost:5000/
 ```
 
-## 🔨 Local
+### 🔨 Local
 
 ```bash
 # Clone o repositório e rode o comando na raiz do projeto:
