@@ -2,27 +2,29 @@
 
 # 💻 Projeto
 
-API REST que consome a [PokéAPI](https://pokeapi.co/) data base, com dois endpoints que o usuário passa um parametro para buscar um Pokémon ou um grupo de Pokémons.
+API REST que consome a [PokéAPI](https://pokeapi.co/) data base, com dois endpoints que o usuário passa um parâmetro para buscar um Pokémon ou um grupo de Pokémons.
 ### Deploy da API no Heroku (https://rest-poke.herokuapp.com) usando a interface do Swagger.
 
 ---
 
 # 📚 API
     GET /pokemons?query=<nome do Pokémon>&sort=<nome do atributo> 
-    - Busca todos os Pokémons que contenham o nome do Pokémon passado como parametro e ordena-os pelo atributo passado 
-    como parametro.
+    - Busca todos os Pokémons que contenham o nome do Pokémon passado como parâmetro e ordena-os pelo atributo 
+    passado como parâmetro.
     
     GET /pokemons/highlight&query=<nome do Pokémon>?sort=<nome do atributo> 
-    - JSON com o Pokémon que contenha o nome do Pokémon passado como parametro e destaca-o pelo atributo passado 
-    como parametro e ordena-os pelo atributo passado como parametro.
+    - JSON com o Pokémon que contenha o nome do Pokémon passado como parâmetro e destaca-o pelo atributo passado 
+    como parâmetro e ordena-os pelo atributo passado como parâmetro.
 
     Params:
     - query: String, obrigatória.
-    - sort: Enum, opcional (para o usuário). Se o argumento não for fornecido, o padrão da classificação é alfabética. 
+    - sort: Enum, opcional (para o usuário). 
+    Se o parâmetro não for fornecido, o padrão da classificação é alfabética.
 
     O objetivo deste endpoint é permitir que os usuários pesquisem pokémons pelo nome. 
-    O usuário enviará uma parte (qualquer parte) do nome do pokémon como parâmetro de consulta, e o serviço deverá 
-    responder com uma lista de pokémons. A diferenciação entre maiúsculas e minúsculas deve ser usada na pesquisa.
+    O usuário enviará uma parte (qualquer parte) do nome do pokémon como parâmetro de consulta, e o serviço 
+    deverá responder com uma lista de pokémons. A diferenciação entre maiúsculas e minúsculas deve ser usada
+    na pesquisa.
 
     No endpoint Highlight, a response também deve destacar a substring que corresponde ao nome do pokémon. 
     A maneira como isso é feito é envolvendo a substring com tags <pre> </pre>.
