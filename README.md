@@ -32,9 +32,6 @@ para buscar um Pokémon ou um grupo de Pokémons.
     No endpoint Highlight, a response também deve destacar a substring que corresponde ao nome do pokémon. 
     A maneira como isso é feito é envolvendo a substring com tags <pre> </pre>.
 
-    Além disso, o usuário deve ser capaz de escolher o tipo de classificação que deseja, e o serviço deve 
-    ordenar a lista de pokémons na ordem solicitada.
-
 ---
 
 ## 🔀 Merge Sort
