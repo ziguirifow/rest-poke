@@ -13,9 +13,7 @@ class SortUtil {
     }
 
     private fun mergeSort(list: List<String>, order: Order?): List<String> {
-        if (list.size <= 1) {
-            return list
-        }
+        if (list.size <= 1) return list
         val middle = list.size / 2
         val left = list.subList(0, middle)
         val right = list.subList(middle, list.size)
@@ -23,41 +21,28 @@ class SortUtil {
     }
 
     private fun merge(left: List<String>, right: List<String>, order: Order?): List<String> {
-        val result = ArrayList<String>()
+        val result = mutableListOf<String>()
         var leftIndex = 0
         var rightIndex = 0
 
         while (leftIndex < left.size && rightIndex < right.size) {
-            if (isLength(order, left, leftIndex, right, rightIndex)) {
-                result.add(left[leftIndex])
-                leftIndex++
+            if (shouldTakeLeft(order, left[leftIndex], right[rightIndex])) {
+                result.add(left[leftIndex++])
             } else {
-                result.add(right[rightIndex])
-                rightIndex++
+                result.add(right[rightIndex++])
             }
         }
 
-        while (leftIndex < left.size) {
-            result.add(left[leftIndex])
-            leftIndex++
-        }
-        while (rightIndex < right.size) {
-            result.add(right[rightIndex])
-            rightIndex++
-        }
+        result.addAll(left.subList(leftIndex, left.size))
+        result.addAll(right.subList(rightIndex, right.size))
         return result
     }
 
-    private fun isLength(
-        order: Order?,
-        left: List<String>,
-        leftIndex: Int,
-        right: List<String>,
-        rightIndex: Int
-    ): Boolean {
+    private fun shouldTakeLeft(order: Order?, left: String, right: String): Boolean {
         return if (order == Order.LENGTH) {
-            left[leftIndex].length < right[rightIndex].length
-        } else
-            left[leftIndex] < right[rightIndex]
+            left.length < right.length
+        } else {
+            left < right
+        }
     }
 }
